@@ -21,6 +21,15 @@ document.addEventListener("DOMContentLoaded", function () {
     fadeElements.forEach(el => observer.observe(el));
 });
 
+// Параллаксный эффект
+window.addEventListener('scroll', () => {
+    const sections = document.querySelectorAll('section');
+    sections.forEach(section => {
+        const y = window.scrollY;
+        section.style.transform = `translateY(${y * 0.2}px)`;
+    });
+});
+
 // Анимация курсора
 let canvas, ctx, particles = [], mouse = { x: 0, y: 0 };
 
