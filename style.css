@@ -235,5 +235,85 @@ html {
 
 .fade-in.visible {
     opacity: 1;
+
+    /* Анимированные кнопки */
+
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    margin-top: 20px;
+    color: #000;
+}
+
+/* Градиентная кнопка */
+.btn-gradient {
+    background: linear-gradient(90deg, #00ffcc, #00bfa5);
+    border: 2px solid #00ffcc;
+    box-shadow: 0 0 10px #00ffcc;
+}
+
+.btn-gradient:hover {
+    background: linear-gradient(90deg, #00bfa5, #00ffcc);
+    transform: scale(1.05);
+}
+
+/* Вращающаяся кнопка */
+.btn-spin {
+    position: relative;
+    overflow: hidden;
+    border: 2px solid #00ffcc;
+    background-color: transparent;
+    color: #00ffcc;
+    transition: all 0.3s ease;
+}
+
+.btn-spin::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle at center, #00ffcc 20%, transparent 60%);
+    animation: spin 4s linear infinite;
+    pointer-events: none;
+    z-index: 0;
+}
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.btn-spin span {
+    position: relative;
+    z-index: 1;
+}
+
+.btn-spin:hover {
+    color: #fff;
+    transform: scale(1.05);
+}
+
+/* Переливающаяся кнопка */
+.btn-glow {
+    background: linear-gradient(90deg, #00ffcc, #00bfa5);
+    border: 2px solid #00ffcc;
+    box-shadow: 0 0 10px #00ffcc;
+    animation: glow 2s infinite alternate ease-in-out;
+}
+
+@keyframes glow {
+    from {
+        box-shadow: 0 0 10px #00ffcc;
+    }
+    to {
+        box-shadow: 0 0 20px #00ffcc, 0 0 30px #00bfa5;
+    }
+}
     transform: translateY(0);
 }
