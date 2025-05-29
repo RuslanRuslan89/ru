@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Профессионал</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        header {
+            background-color: #222;
+            color: white;
+            padding: 20px 40px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #333;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        section {
+            padding: 60px 40px;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        h1, h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .services {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .service {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            padding: 20px;
+            width: 250px;
+            text-align: center;
+        }
+
+        footer {
+            background-color: #222;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+
+        @media (max-width: 768px) {
+            .services {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Иван Иванов</h1>
+        <p>Профессионал в сфере IT</p>
+    </header>
+
+    <nav>
+        <a href="#about">О себе</a>
+        <a href="#services">Услуги</a>
+        <a href="#contact">Контакты</a>
+    </nav>
+
+    <section id="about">
+        <h2>О себе</h2>
+        <p>
+            Я — разработчик с более чем 5 летним опытом работы в сфере веб-разработки.
+            Создаю красивые и функциональные сайты, решаю сложные задачи и всегда стремлюсь к высокому качеству.
+        </p>
+    </section>
+
+    <section id="services">
+        <h2>Мои услуги</h2>
+        <div class="services">
+            <div class="service">
+                <h3>Веб-дизайн</h3>
+                <p>Создание уникальных интерфейсов, адаптированных под все устройства.</p>
+            </div>
+            <div class="service">
+                <h3>Разработка сайтов</h3>
+                <p>Полноценные решения на HTML, CSS, JS, React и других технологиях.</p>
+            </div>
+            <div class="service">
+                <h3>SEO оптимизация</h3>
+                <p>Повышение видимости сайта в поисковых системах.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Свяжитесь со мной</h2>
+        <p>Email: ivanov@example.com</p>
+        <p>Телефон: +7 (123) 456-78-90</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Иван Иванов. Все права защищены.</p>
+    </footer>
+
+</body>
+</html>
