@@ -31,19 +31,15 @@ body {
     top: 20px;
     left: 50%;
     transform: translateX(-50%);
-    width: 200px;
-    height: auto;
+    width: 100px;
+    height: 100px;
     z-index: 1000;
-    animation: glow 2s infinite alternate ease-in-out;
+    animation: spin 5s linear infinite;
 }
 
-@keyframes glow {
-    from {
-        stroke: #00ffcc;
-    }
-    to {
-        stroke: #00bfa5;
-    }
+@keyframes spin {
+    from { transform: translateX(-50%) rotate(0deg); }
+    to { transform: translateX(-50%) rotate(360deg); }
 }
 
 @keyframes galaxy-shine {
@@ -157,6 +153,26 @@ h2 {
 
 .service:hover {
     transform: translateY(-5px);
+}
+
+.gallery-images {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.gallery-images img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #00ffcc;
+    transition: transform 0.3s ease;
+}
+
+.gallery-images img:hover {
+    transform: scale(1.05);
 }
 
 footer {
